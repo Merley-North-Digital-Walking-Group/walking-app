@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'groups',
     'users',
     'reviews',
-    'walks'
+    'walks',
 ]
 
 MIDDLEWARE = [

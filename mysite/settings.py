@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'pages',
     'groups',
     'users',
+    'reviews',
+    'walks'
 ]
 
 MIDDLEWARE = [

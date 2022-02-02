@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'users',
     'reviews',
     'walks',
-    'geoposition',
+    #'geoposition',
 ]
 
 MIDDLEWARE = [

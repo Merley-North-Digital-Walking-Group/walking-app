@@ -4,8 +4,11 @@ from django.db import models
 class Group(models.Model):
     group_name = models.CharField(max_length=200)
     group_description = models.TextField()
-    #group_photo = models.ImageField()
+    group_photo = models.ImageField(default=None, height_field=768, width_field=1024)
     meeting_day = models.CharField(max_length=50)
     meeting_time = models.DateTimeField()
     meetup_link = models.CharField(max_length=300)
-    #members_list = ForeignKey link to user ids 
+    
+
+
+ 

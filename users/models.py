@@ -13,3 +13,5 @@ class User(models.Model):
     #groups = models.ForeignKey("groups", on_delete=models.CASCADE)
     location = models.CharField(max_length=100)
     email = models.CharField(max_length=200)
+    group = models.ManyToManyField('groups.Group')
+    

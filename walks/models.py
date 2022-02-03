@@ -1,5 +1,5 @@
 from django.db import models
-from PIL import Image
+# from PIL import Image
 # from geoposition.fields import GeopositionField - this is supposed to work but doesn't want to
 
 # Create your models here.
@@ -18,6 +18,6 @@ class Walk(models.Model):
     scenic_spot = models.BooleanField()
     dog_bin = models.BooleanField()
     rating = models.IntegerField()
-    photo = models.ImageField(default=None, height_field=768, width_field=1024)
+    # photo = models.ImageField(default=None, height_field=768, width_field=1024)
     # reviews = need to connect via review IDs
     # map_coordinates = GeopositionField() - need to find a different solution

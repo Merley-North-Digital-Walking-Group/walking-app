@@ -21,19 +21,19 @@
 
     <title>Walking Group | Home</title>
 </head>
-<body class="index-body">
+<body>
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><i class="nav-home-icon fas fa-2x fa-home"></i></a>
+          <a class="navbar-brand" href="{% url 'index' %}"><i class="nav-home-icon fas fa-2x fa-home"></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
               <a class="nav-link" href="contact.html">Contact</a>
               <a class="nav-link" href="weather.html">Weather forecast</a>
               <a class="nav-link" href="news.html">Local news</a>
@@ -43,7 +43,7 @@
       </nav>
 
     <!--Main-->
-    
+
       {% block content %}
       {% endblock %}
 

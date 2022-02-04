@@ -1,0 +1,53 @@
+
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container col-8 mx-auto mt-5">
+    <div class="header">
+        <h2>
+            Create new user
+        </h2>
+    </div>
+
+
+    <form>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <div class="mb-3">
+          <label for="repeatInputPassword2" class="form-label">Repeat password</label>
+          <input type="password" class="form-control" id="repeatInputPassword2">
+        </div>
+
+        <label for="Address" class="form-label">Address</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Postcode" aria-label="Postcode" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Find my address</button>
+          </div>
+
+          <div class="mb-3">
+            <label for="dateOfBirth" class="form-label">Date of birth (optional, for step counter)</label>
+            <input type="date" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Yes, I would like to receive the email newsletter</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mt-4 create-user-submit">Submit</button>
+        </div>
+      </form>
+
+</div>
+
+{% endblock %}

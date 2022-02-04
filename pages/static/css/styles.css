@@ -1,11 +1,11 @@
 :root {
     /* --dark: #2E426F; navy */
     --dark: #146356; /* green */
-    /* --medium: #11468F; */
+    --medium: #11468F; 
     /* --medium: #4267B2; Facebook */
     /* --medium: #1572A1; 
     /* --medium: #006A71; green */
-     --medium: #3FC5F0; /*light */
+     /* --medium: #3FC5F0; light */
     /* --medium: #73c1de; light-dusky; */
     --grey: #898F9C;
     --white: #fff ;
@@ -25,6 +25,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     /* free on unsplash @jesmanfabio */
 }
 

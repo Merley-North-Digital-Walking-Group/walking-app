@@ -32,11 +32,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
               <a class="nav-link" href="{% url 'about' %}">About</a>
-              <a class="nav-link" href="contact.html">Contact</a>
-              <a class="nav-link" href="weather.html">Weather forecast</a>
-              <a class="nav-link" href="news.html">Local news</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              <a class="nav-link" href="{% url 'weather' %}">Weather forecast</a>
+              <a class="nav-link" href="{% url 'news' %}">Local news</a>
             </div>
           </div>
         </div>

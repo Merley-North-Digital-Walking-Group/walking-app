@@ -1,0 +1,66 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container col-md-8 mx-auto">
+    <div class="weather-app-wrapper"><!--app unit rounded corners white box-->
+        <div class="weather-app">
+            <div class="weather-header">
+                    <img src="../static/img/weather/cloudandsun.svg" class="headerImg" alt="header image of sun and cloud"></a>
+                    <img src="../static/img/weather/snowflake.svg" class="headerImg" alt="header image of snowflake"></a>
+                    <img src="../static/img/weather/sun.svg" class="headerImg" alt="header image of sun">
+                    <img src="../static/img/weather/lightning.svg" class="headerImg" alt="header image of lightning">
+                    <img src="../static/img/weather/raincloud.svg" class="headerImg" alt="header image of raincloud">
+                    <img src="../static/img/weather/cloudsandsun.svg" class="headerImg" alt="header image of sun and clouds">
+                    <img src="../static/img/weather/windcloud.svg" class="headerImg" alt="header image of wind">
+            </div>
+            <form id="search-form" class="mb-3 mt-3">
+                <div class="row">
+                    <div class="col-9">
+                        <input 
+                        type="search" 
+                        placeholder="Enter a city..." 
+                        class="form-control search-input"
+                        id="city-input"
+                        autocomplete="off">
+                    </div>
+                    <div class="col-3 ">
+                        <input 
+                        type="submit" 
+                        class="btn btn-primary w-100" 
+                        value="Search">
+                    </div>
+                </div>
+            </form>
+            <hr />
+
+            <div class="row">
+                <div class="col-6 city-and-details">
+                    <h2 id="city"></h2>
+                    <ul>
+                        <li>Last updated: <span id="date-and-updated"></span></li> 
+                        <li><span id="description"></span></li>
+                    </ul>
+                </div>
+                <div class="col-6 big-image-and-temperature">
+                    <div class="temperature-container d-flex justify-content-end">
+                        <img src="" alt="" id = "icon" class="temperature-img">
+                        <div>
+                            <span class="temperature" id="temperature"></span>
+                            <span class="unit">
+                                °C
+                            </span>
+                        </div>
+                    </div>
+                    <div class="humidity-and-wind">Humidity: <strong><span id="humidity"></span>%</strong>, Wind: <strong><span id="wind"></span> m/s</strong></div>
+                </div>
+            </div>
+            <hr />
+        <div class="weather-forecast" id="forecast"></div>
+    </div>
+</div>
+</div>
+
+<script src="../static/js/weather.js"></script>
+
+{% endblock %}

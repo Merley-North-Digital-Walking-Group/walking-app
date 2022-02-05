@@ -44,6 +44,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 1.5;
+}
+
 a {
     text-decoration: none;
 }
@@ -160,6 +164,66 @@ p {
     color: var(--medium);
 }
 
+/* walks */
+.walk-container {
+    background-color: var(--pale);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.walk-distance {
+    font-style: italic;
+}
+
+.walk-external-link {
+    font-size: 28px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.walk-icon {
+    font-size: 18px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 6px;
+    min-height: 36px;
+}
+
+.circle {
+    background: grey;
+    border-radius:50px;
+    color:#fff;
+    font-size:20px;
+    height:40px;
+    line-height:40px;
+    margin: 4px;
+    text-align:center;
+    width:40px;
+}
+
+.circle-orange {
+    background: orange;
+}
+.circle-blue {
+    background: blue;
+}
+.circle-green {
+    background: green;
+}
+.circle-purple {
+    background: purple;
+}
+
+.fa-external-link-alt {
+    color: var(--dark);
+}
+
+.fa-external-link-alt:hover {
+    color: var(--medium);
+}
+
+
 /* Media query */
 @media (max-width: 600px) {
 
@@ -170,6 +234,14 @@ p {
     h1 {
         font-size: 7vw;
         margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    h3 {
+        font-size: 4vw;
     }
 
     .btn-lg {

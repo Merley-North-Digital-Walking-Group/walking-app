@@ -1,0 +1,99 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container mx-auto mt-5">
+    
+    <h2>Merley Loop Walk</h2>
+
+    <div class="walk-container">
+        <div class="row">
+            <h3>Amenities</h3>
+        </div>
+        <div class="row">
+            <p><span class="walk-details-amenity-heading">Distance: </span><span class="walk-distance">2 miles</span></p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <i class="fas fa-restroom circle circle-orange"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <p class="walk-details-amenity-heading">Toilets:</p>
+                        </div>
+                        <div class="row">
+                            <p class="walk-details-amenity-detail">Toilets are available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <i class="fas fa-parking circle circle-blue"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <p class="walk-details-amenity-heading">Parking:</p>
+                        </div>
+                        <div class="row">
+                            <p class="walk-details-amenity-detail">Parking is available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <i class="fas fa-wheelchair circle circle-green"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <p class="walk-details-amenity-heading">Wheelchair access:</p>
+                        </div>
+                        <div class="row">
+                            <p class="walk-details-amenity-detail">This walk is wheelchair accessible</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <i class="fas fa-mountain circle circle-purple"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <p class="walk-details-amenity-heading">Gradient:</p>
+                        </div>
+                        <div class="row">
+                            <p class="walk-details-amenity-detail">This walk has some inclines</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <img class="img-fluid walks-detail-img" src="../static/img/map.png" alt="map picture">
+            </div>
+        </div>
+    </div>
+
+    <div class="walk-container-reviews">
+        <div class="row">
+            <h3>Reviews</h3>
+        </div>
+
+        <div class="row review">
+            <p class="review-p">Lovely walk! A bit steep, make sure you have good grip on your footwear.</p>
+            <p class="review-p">- <span class="review-username">betty_red22</span></p>
+        </div>
+        <div class="row review">
+            <p class="review-p">Lots of bluebells in the spring. My dog Scout loved this walk.</p>
+            <p class="review-p">- <span class="review-username">evfsmart</span></p>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

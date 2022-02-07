@@ -4,7 +4,10 @@
 
 <div class="container mx-auto mt-5">
     
-    <h2>Merley Loop Walk</h2>
+    <h2>{% for walk in walk_list %}<!--This loop goes through every row in the table - we need to figure out how to pull a specific entry from the database column -->
+          {{ walk.walk_name }} <!--finds the column named walk_name within the table and displays the info-->
+        {% endfor %}
+    </h2>
 
     <div class="walk-container">
         <div class="row">

@@ -7,7 +7,7 @@ from django.db import models
 class Walk(models.Model):
     # walk ID will be automatically generated
     walk_name = models.CharField(max_length=100)
-    walk_length = models.DecimalField(max_digits=4, decimal_places=2)
+    walk_length = models.DecimalField(max_digits=4, decimal_places=2, help_text="Distance in miles")
     elevation = models.IntegerField     # Ideally this will be grabbed from the highest point on Google Maps
     step_count = models.IntegerField(default=None)
     parking = models.BooleanField()

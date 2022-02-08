@@ -76,10 +76,6 @@ p {
     color: var(--dark);
 }
 
-/* .navbar-dark .navbar-toggler-icon {
-    color: var(--white);
-} */
-
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--white);
     font-weight: 700;
@@ -173,11 +169,19 @@ p {
     margin-bottom: 12px;
 }
 
+.walks-container {
+    margin-bottom: 100px;
+}
+
 .walk-container-reviews {
     background-color: var(--pale);
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 100px;
+}
+
+.walk-details {
+    margin-bottom: 24px;
 }
 
 .walk-distance {
@@ -206,12 +210,15 @@ p {
 
 .walk-details-amenity-heading {
     font-weight: 900;
-    margin: 0;
 }
 
 .walk-details-amenity-detail {
-    margin: 0;
-    padding-top: 0;
+    padding-top: 6px;
+    padding-bottom: 0;
+}
+
+.walk-container p {
+    margin-bottom: 0;
 }
 
 .circle {
@@ -237,6 +244,18 @@ p {
 }
 .circle-purple {
     background: purple;
+}
+
+.circle-pink {
+    background: rgb(236, 72, 195);
+}
+
+.circle-red {
+    background: red;
+}
+
+.circle-light-blue {
+    background: lightskyblue;
 }
 
 .fa-external-link-alt {

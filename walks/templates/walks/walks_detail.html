@@ -4,79 +4,100 @@
 
 <div class="container mx-auto mt-5">
     
-    <h2>{% for walk in walk_list %}<!--This loop goes through every row in the table - we need to figure out how to pull a specific entry from the database column -->
-          {{ walk.walk_name }} <!--finds the column named walk_name within the table and displays the info-->
-        {% endfor %}
+    <h2> 
+        {{ walk.walk_name }}
     </h2>
 
     <div class="walk-container">
-        <div class="row">
-            <h3>Amenities</h3>
-        </div>
-        <div class="row">
-            <p><span class="walk-details-amenity-heading">Distance: </span><span class="walk-distance">2 miles</span></p>
+        <div class="row walk-details">
+            <p><span class="walk-details-amenity-heading">Distance: </span><span class="walk-distance">{{ walk.walk_length }} miles</span></p>
+            <p><span class="walk-details-amenity-heading">Step count: </span><span class="walk-distance">{{ walk.step_count }} steps</span></p>
+            <p><span class="walk-details-amenity-heading">Rating: </span><span class="walk-distance">{{ walk.rating }} </span></p>
+            <br />
         </div>
         <div class="row">
             <div class="col-md-4 mb-3">
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <i class="fas fa-restroom circle circle-orange"></i>
-                    </div>
-                    <div class="col-10">
-                        <div class="row">
-                            <p class="walk-details-amenity-heading">Toilets:</p>
-                        </div>
-                        <div class="row">
-                            <p class="walk-details-amenity-detail">Toilets are available</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <i class="fas fa-parking circle circle-blue"></i>
-                    </div>
-                    <div class="col-10">
-                        <div class="row">
-                            <p class="walk-details-amenity-heading">Parking:</p>
+                {% if walk.parking %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-parking circle circle-blue"></i>
                         </div>
-                        <div class="row">
+                        <div class="col-10">
                             <p class="walk-details-amenity-detail">Parking is available</p>
                         </div>
                     </div>
-                </div>
+                {% endif %}            
 
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <i class="fas fa-wheelchair circle circle-green"></i>
-                    </div>
-                    <div class="col-10">
-                        <div class="row">
-                            <p class="walk-details-amenity-heading">Wheelchair access:</p>
+                {% if walk.wheelchair_access %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-wheelchair circle circle-green"></i>
                         </div>
-                        <div class="row">
-                            <p class="walk-details-amenity-detail">This walk is wheelchair accessible</p>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">Wheelchair accessible</p>
                         </div>
                     </div>
-                </div>
+                {% endif %}                   
 
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <i class="fas fa-mountain circle circle-purple"></i>
-                    </div>
-                    <div class="col-10">
-                        <div class="row">
-                            <p class="walk-details-amenity-heading">Gradient:</p>
+                {% if walk.toilet %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-restroom circle circle-orange"></i>
                         </div>
-                        <div class="row">
-                            <p class="walk-details-amenity-detail">This walk has some inclines</p>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">Toilets are available</p>
                         </div>
                     </div>
-                </div>
+                {% endif %}
+
+                {% if walk.cafe %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-coffee circle circle-purple"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">There is a cafe</p>
+                        </div>
+                    </div>
+                {% endif %}                
+                
+                {% if walk.rest_area %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-chair circle circle-red"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">There is a rest area</p>
+                        </div>
+                    </div>
+                {% endif %}     
+
+                {% if walk.scenic_spot %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-camera circle circle-light-blue"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">There is a scenic spot</p>
+                        </div>
+                    </div>
+                {% endif %}  
+                
+                {% if walk.dog_bin %}
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-dog circle circle-pink"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="walk-details-amenity-detail">Dog waste bins are available</p>
+                        </div>
+                    </div>
+                {% endif %}                    
 
             </div>
             <div class="col-md-8">
-                <img class="img-fluid walks-detail-img" src="../static/img/map.png" alt="map picture">
+                <img class="img-fluid walks-detail-img" src="/static/img/map.png" alt="map picture">
             </div>
         </div>
     </div>
@@ -98,5 +119,6 @@
     </div>
 
 </div>
+
 
 {% endblock %}

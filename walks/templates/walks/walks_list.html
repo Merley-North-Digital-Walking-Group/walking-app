@@ -2,43 +2,34 @@
 <!--Main-->
 {% block content %}
 
-<div class="container col-md-8 mx-auto mt-5">
+<div class="container walks-container col-md-8 mx-auto mt-5">
     
     <h2>Walks near you</h2>
 
-    <div class="walk-container">
-        <div class="row">
-            <div class="col-10">
-                <h3 class="walk-name">Merley Loop Walk</h3>
-                <p class="walk-distance">2 miles</p>
-                <i class="fas fa-restroom circle circle-orange"></i>
-                <i class="fas fa-parking circle circle-blue"></i>
-                <i class="fas fa-wheelchair circle circle-green"></i>
-                <i class="fas fa-mountain circle circle-purple"></i>
-            </div>
-            <div class="col-2 walk-external-link">
-                <a href="{% url 'walks_detail' %}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-    </div>
+    {% for walk in walk_list %}<!--This loop goes through every row in the table - we need to figure out how to pull a specific entry from the database column -->
 
     <div class="walk-container">
         <div class="row">
             <div class="col-10">
-                <h3 class="walk-name">Fenners Field Park</h3>
-                <p class="walk-distance">3.5 miles</p>
-                <i class="fas fa-restroom circle circle-orange"></i>
-                <i class="fas fa-parking circle"></i>
-                <i class="fas fa-wheelchair circle circle-green"></i>
-                <i class="fas fa-mountain circle"></i>
+                <h3 class="walk-name">{{ walk.walk_name }}</h3>
+                <p class="walk-distance">{{ walk.walk_length }} miles</p>
+                {% if walk.parking %} <i class="fas fa-parking circle circle-blue"></i> {% endif %}
+                {% if walk.wheelchair_access %} <i class="fas fa-wheelchair circle circle-green"></i> {% endif %}
+                {% if walk.toilet %} <i class="fas fa-restroom circle circle-orange"></i> {% endif %}
+                {% if walk.cafe %} <i class="fas fa-coffee circle circle-purple"></i> {% endif %}
+                {% if walk.rest_area %} <i class="fas fa-chair circle circle-red"></i> {% endif %}
+                {% if walk.scenic_spot %} <i class="fas fa-camera circle circle-light-blue"></i> {% endif %}
+                {% if walk.dog_bin %} <i class="fas fa-dog circle circle-pink"></i> {% endif %}
+                
+                {% comment %}  <i class="fas fa-mountain circle circle-purple"></i> {% endcomment %}
             </div>
             <div class="col-2 walk-external-link">
-                <a href="{% url 'walks_detail' %}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                <a href="{% url 'walks_detail' pk=walk.pk %}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
     </div>
 
-
+{% endfor %}
 
 </div>
 

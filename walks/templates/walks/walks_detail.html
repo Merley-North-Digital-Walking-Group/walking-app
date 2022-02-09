@@ -102,9 +102,12 @@
         </div>
     </div>
 
-    <div class="walk-container-reviews">
-        {% comment %} <img src="{{ walk.photo.url }}" alt="img"> {% endcomment %}
-    </div>
+    {% if walk.photo %}
+        <div class="walk-container-photo">
+            <p class="photo-caption">Photo of {{ walk.walk_name }}</p>
+            {% comment %} <img src="{{ walk.photo.url }}" alt="img"> {% endcomment %}
+        </div>
+    {% endif %}
         
 
 

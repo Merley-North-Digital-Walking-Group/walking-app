@@ -180,6 +180,13 @@ p {
     margin-bottom: 100px;
 }
 
+.walk-container-photo {
+    background-color: var(--pale);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .walk-details {
     margin-bottom: 24px;
 }
@@ -279,6 +286,12 @@ p {
 
 .review-username {
     font-style: italic;
+}
+
+.photo-caption {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
 }
 
 

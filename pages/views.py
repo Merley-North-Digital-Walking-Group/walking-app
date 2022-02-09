@@ -15,3 +15,6 @@ def weather(request):
 
 def news(request):
     return render(request, 'pages/news.html', {})
+
+def admin(request):
+    return render(request, 'pages')

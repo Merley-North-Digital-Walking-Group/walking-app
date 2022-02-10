@@ -1,4 +1,4 @@
-from tkinter import Image
+# from tkinter import Image
 from django.db import models
 
 # from geoposition.fields import GeopositionField - this is supposed to work but doesn't want to

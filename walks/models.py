@@ -1,5 +1,6 @@
+from tkinter import Image
 from django.db import models
-# from PIL import Image
+
 # from geoposition.fields import GeopositionField - this is supposed to work but doesn't want to
 
 # Create your models here.
@@ -18,6 +19,7 @@ class Walk(models.Model):
     scenic_spot = models.BooleanField()
     dog_bin = models.BooleanField()
     rating = models.IntegerField(help_text="Rating out of 5")
-    photo = models.ImageField(upload_to=None, height_field=None, width_field=None, blank=True)
+    photo = models.ImageField(null=True, blank=True, upload_to="walks/photos/")
+
     # reviews = need to connect via review IDs
     # map_coordinates = GeopositionField() - need to find a different solution

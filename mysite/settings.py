@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'users',
     'reviews',
     'walks',
-    #'geoposition',
-]
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

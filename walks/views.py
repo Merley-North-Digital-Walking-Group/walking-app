@@ -13,6 +13,5 @@ def walks_detail(request, pk):
 
 #added by Pol 09-02-2022
 def walk_photo(request):
-    # photos = Walk.objects.all()
     walk_photo = Walk.photo()
     return render(request, 'walks/walks_detail.html', {'walk': walk_photo})

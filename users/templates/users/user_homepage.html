@@ -9,14 +9,17 @@
     </h2>
 
     <div class="walk-container">
-        Details here
-        
+        <h3>My profile:</h3>
+        <P>Name: {{ user.name_first }} {{user.name_last }}</P>
+        <P>Username: {{ user.username_handle }}</P>
+        <P>email: {{ user.email }}</P>
     </div>
+    <div class="walk-container">
+        <h3>My groups</h3>
+        <P> {{ user.group }} </P>
 
+    </div>  
     
-        
-    </div>
-
 </div>
 
 

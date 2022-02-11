@@ -114,7 +114,8 @@
     {% if walk.photo %}
         <div class="walk-container-photo">
             <p class="photo-caption">Photo of {{ walk.walk_name }}</p>
-            {% comment %} <img src="{{ walk.photo.url }}" alt="img"> {% endcomment %}
+            <img class="img-fluid walks-detail-img"
+            src="{{ walk.photo.url }}">
         </div>
     {% endif %}
         

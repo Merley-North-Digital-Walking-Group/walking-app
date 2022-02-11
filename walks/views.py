@@ -1,3 +1,4 @@
+from ast import walk
 from django.shortcuts import render, get_object_or_404
 from .models import Walk #required to import information about the database table called 'Walk' in walks/models 
 
@@ -9,3 +10,9 @@ def walks_list(request):
 def walks_detail(request, pk):
     walk = get_object_or_404(Walk, pk=pk)
     return render(request, 'walks/walks_detail.html', {'walk': walk})
+
+#added by Pol 09-02-2022
+def walk_photo(request):
+    # photos = Walk.objects.all()
+    walk_photo = Walk.photo()
+    return render(request, 'walks/walks_detail.html', {'walk': walk_photo})

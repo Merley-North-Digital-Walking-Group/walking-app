@@ -19,7 +19,8 @@ class Walk(models.Model):
     scenic_spot = models.BooleanField()
     dog_bin = models.BooleanField()
     rating = models.IntegerField(help_text="Rating out of 5")
+    lat = models.DecimalField(max_digits=9, decimal_places=6, default=50.78448)
+    lng = models.DecimalField(max_digits=9, decimal_places=6, default=-1.96783)
     photo = models.ImageField(null=True, blank=True, upload_to="walks/photos/")
-
     # reviews = need to connect via review IDs
     # map_coordinates = GeopositionField() - need to find a different solution

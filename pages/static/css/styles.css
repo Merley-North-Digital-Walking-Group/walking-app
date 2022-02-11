@@ -294,6 +294,20 @@ p {
     text-align: center;
 }
 
+/* map */
+#map {
+    background-color: var(--medium);
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #ccc;
+    height: 400px;
+    width: 100%;
+}
+
+.coords {
+    color: var(--pale);
+    font-size: 2px;
+}
 
 /* Media query */
 @media (max-width: 600px) {

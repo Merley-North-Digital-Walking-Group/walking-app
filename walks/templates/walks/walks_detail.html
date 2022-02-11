@@ -4,7 +4,7 @@
 
 <div class="container mx-auto mt-5">
     
-    <h2> 
+    <h2 id="walk_name"> 
         {{ walk.walk_name }}
     </h2>
 
@@ -13,6 +13,7 @@
             <p><span class="walk-details-amenity-heading">Distance: </span><span class="walk-distance">{{ walk.walk_length }} miles</span></p>
             <p><span class="walk-details-amenity-heading">Step count: </span><span class="walk-distance">{{ walk.step_count }} steps</span></p>
             <p><span class="walk-details-amenity-heading">Rating: </span><span class="walk-distance">{{ walk.rating }} </span></p>
+            <p class="coords"><span id="walk-lat">{{ walk.lat }}</span> <span id="walk-lng">{{ walk.lng }}</span></p>
             <br />
         </div>
         <div class="row">
@@ -96,9 +97,17 @@
                 {% endif %}                    
 
             </div>
+            {% comment %} google map {% endcomment %}
             <div class="col-md-8">
-                <img class="img-fluid walks-detail-img" src="/static/img/map.png" alt="map picture">
+                <div id="map">
+                    <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYR34JwAY2CTIUUIpoXQBkQlH1cR9QrDE&callback=initMap&libraries=&v=weekly";
+                    async
+                  >`zå`
+                </script>
+                </div>
             </div>
+            {% comment %} end google map {% endcomment %}
         </div>
     </div>
 
@@ -124,10 +133,11 @@
             <p class="review-p">Lots of bluebells in the spring. My dog Scout loved this walk.</p>
             <p class="review-p">- <span class="review-username">evfsmart</span></p>
         </div>
-
     </div>
-
 </div>
+
+
+<script src="/static/js/map.js"></script>
 
 
 {% endblock %}

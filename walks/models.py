@@ -19,5 +19,7 @@ class Walk(models.Model):
     dog_bin = models.BooleanField()
     rating = models.IntegerField(help_text="Rating out of 5")
     photo = models.ImageField(upload_to=None, height_field=None, width_field=None, blank=True)
+    lat = models.DecimalField(max_digits=9, decimal_places=6, default=50.78448)
+    lng = models.DecimalField(max_digits=9, decimal_places=6, default=-1.96783)
     # reviews = need to connect via review IDs
     # map_coordinates = GeopositionField() - need to find a different solution

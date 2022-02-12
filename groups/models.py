@@ -8,6 +8,9 @@ class Group(models.Model):
     meeting_day = models.CharField(max_length=50)
     meeting_time = models.DateTimeField()
     meetup_link = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.group_name
     
 
 

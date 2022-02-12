@@ -1,5 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from .models import User
+from groups.models import Group
+
 
 # Create your views here.
 def login_email(request):
@@ -17,5 +19,9 @@ def create_user(request):
 def user_homepage(request, pk):
     #user = User.objects.all()# I think this is uneccessary
     user = get_object_or_404(User, pk=pk)
+    #group = get_object_or_404(Group, pk=pk)
     return render(request, 'users/user_homepage.html', {'user': user}) 
+    
+
+    
     

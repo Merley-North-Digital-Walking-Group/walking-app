@@ -14,8 +14,8 @@ def login_google(request):
 def create_user(request):
     return render(request, 'users/create_user.html', {})
 
-def user_homepage(request, pk):# I think pk isn't working because I'm not telling the page it needs it
-    user = User.objects.all()
+def user_homepage(request, pk):
+    #user = User.objects.all()# I think this is uneccessary
     user = get_object_or_404(User, pk=pk)
-    return render(request, 'users/user_homepage.html', {'user': user}) #user': user - removed from {}
+    return render(request, 'users/user_homepage.html', {'user': user}) 
     

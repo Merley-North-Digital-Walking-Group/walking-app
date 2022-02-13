@@ -10,7 +10,7 @@ class Group(models.Model):
     meetup_link = models.CharField(max_length=300)
 
     def __str__(self):
-        return self.group_name
+        return '%s %s' % (self.group_name, self.meeting_day)
     
 
 

@@ -17,9 +17,7 @@ def create_user(request):
     return render(request, 'users/create_user.html', {})
 
 def user_homepage(request, pk):
-    #user = User.objects.all()# I think this is uneccessary
     user = get_object_or_404(User, pk=pk)
-    #group = get_object_or_404(Group, pk=pk)
     return render(request, 'users/user_homepage.html', {'user': user}) 
     
 

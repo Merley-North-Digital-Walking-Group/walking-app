@@ -8,6 +8,7 @@
         Welcome to your home page {{ user.name_first }}
     </h2>
 
+
     <div class="walk-container">
         <h3>My profile:</h3>
         <P>Name: {{ user.name_first }} {{user.name_last }}</P>
@@ -16,8 +17,13 @@
     </div>
     <div class="walk-container">
         <h3>My groups:</h3>
-        <ul><P>{{ user.group.all }}</P></ul>
-
+        <P>  
+           <td>{% for element in user.group.all %}
+               {{ element.group_name}}<br>
+               {% endfor %}
+           </td> 
+        </P> 
+        
     </div>  
     
 </div>

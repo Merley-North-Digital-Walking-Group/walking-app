@@ -15,10 +15,15 @@ Python 3
 2 - Install and activate a python venv.
 
 3 - Install required packages:
+```
       $ pip install -r requirements.txt
+```
 
 4 - Initialise database:
-      $ python manage.py migrate
-
+```
+$ python manage.py migrate
+```
 5 - Run app on local server:
-      $ python manage.py runserver
+```
+$ python manage.py runserver
+```

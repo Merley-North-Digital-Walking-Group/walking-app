@@ -34,6 +34,7 @@ h1 {
     font-family: "Kalam", sans-serif;
     font-size: 6vw;
     font-weight: 700;
+    margin-top: 10%;
     text-align: center;
 }
 
@@ -43,6 +44,14 @@ h2 {
     font-weight: 700;
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.index-strapline {
+    color: var(--grey);
+    font-size: 3vw;
+    font-weight: 400;
+    margin-bottom: 8%;
+    text-align: center;
 }
 
 h3 {

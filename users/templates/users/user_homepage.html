@@ -5,15 +5,15 @@
 <div class="container mx-auto mt-5">
     
     <h2> 
-        Welcome to your home page {{ user.name_first }}
+        Welcome to your home page {{ user.user.first_name }}
     </h2>
 
 
     <div class="walk-container">
         <h3>My profile:</h3>
-        <P>Name: {{ user.name_first }} {{user.name_last }}</P>
-        <P>Username: {{ user.username_handle }}</P>
-        <P>email: {{ user.email }}</P>
+        <P>Name: {{ user.user.first_name }} {{ user.user.last_name }}</P>
+        <P>Username: {{ user.user.username }}</P>
+        <P>email: {{ user.user.email }}</P>
     </div>
     <div class="walk-container">
         <h3>My groups:</h3>

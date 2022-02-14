@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import User
+from .models import App_User
 from groups.models import Group
 
 
@@ -17,7 +17,7 @@ def create_user(request):
     return render(request, 'users/create_user.html', {})
 
 def user_homepage(request, pk):
-    user = get_object_or_404(User, pk=pk)
+    user = get_object_or_404(App_User, pk=pk)
     return render(request, 'users/user_homepage.html', {'user': user}) 
     
 

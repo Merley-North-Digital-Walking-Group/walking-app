@@ -8,8 +8,9 @@ By joining a walking group members can find new places to walk and meet new peop
 Instructions to install and run on local machine:
 
 Prerequisites:
--Python 3
--git
+- Python 3
+- git
+
 
 1 - Clone repository from GitHub on your local machine.
 

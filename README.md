@@ -21,9 +21,9 @@ Python 3
 
 4 - Initialise database:
 ```
-$ python manage.py migrate
+      $ python manage.py migrate
 ```
 5 - Run app on local server:
 ```
-$ python manage.py runserver
+      $ python manage.py runserver
 ```

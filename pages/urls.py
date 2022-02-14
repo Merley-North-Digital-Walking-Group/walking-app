@@ -8,7 +8,7 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('weather', views.weather, name='weather'),
     path('news', views.news, name='news'),
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('', include('users.urls')),
     path('', include('walks.urls')),
 

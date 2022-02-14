@@ -1,15 +1,13 @@
 # from tkinter import Image
 from django.db import models
 
-# from geoposition.fields import GeopositionField - this is supposed to work but doesn't want to
-
 # Create your models here.
 
 class Walk(models.Model):
     # walk ID will be automatically generated
     walk_name = models.CharField(max_length=100)
     walk_length = models.DecimalField(max_digits=4, decimal_places=2, help_text="Distance in miles")
-    elevation = models.IntegerField     # Ideally this will be grabbed from the highest point on Google Maps
+    # elevation = models.IntegerField(default=0)     # Ideally this will be grabbed from the highest point on Google Maps
     step_count = models.IntegerField(default=None)
     parking = models.BooleanField()
     wheelchair_access = models.BooleanField()
@@ -22,5 +20,6 @@ class Walk(models.Model):
     lat = models.DecimalField(max_digits=9, decimal_places=6, default=50.78448)
     lng = models.DecimalField(max_digits=9, decimal_places=6, default=-1.96783)
     photo = models.ImageField(null=True, blank=True, upload_to="walks/photos/")
+
+    # reviews = models.ManyToManyField
     # reviews = need to connect via review IDs
-    # map_coordinates = GeopositionField() - need to find a different solution

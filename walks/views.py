@@ -11,7 +11,6 @@ def walks_detail(request, pk):
     walk = get_object_or_404(Walk, pk=pk)
     return render(request, 'walks/walks_detail.html', {'walk': walk})
 
-#added by Pol 09-02-2022
 def walk_photo(request):
     walk_photo = Walk.photo()
     return render(request, 'walks/walks_detail.html', {'walk': walk_photo})

@@ -9,6 +9,7 @@ Instructions to install and run on local machine:
 
 Prerequisites:
 Python 3
+git
 
 1 - Clone repository from GitHub on your local machine.
 

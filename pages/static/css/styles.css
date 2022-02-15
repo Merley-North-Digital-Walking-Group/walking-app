@@ -47,11 +47,12 @@ h2 {
 }
 
 .index-strapline {
-    color: var(--grey);
+    color: #666;
     font-size: 3vw;
     font-weight: 400;
     margin-bottom: 8%;
     text-align: center;
+    text-shadow: 1px 1px 2px var(--white);
 }
 
 h3 {

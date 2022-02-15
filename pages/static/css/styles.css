@@ -29,6 +29,10 @@ body {
     /* free on unsplash @jesmanfabio */
 }
 
+.center {
+    text-align: center;
+}
+
 h1 {
     color: var(--dark);
     font-family: "Kalam", sans-serif;

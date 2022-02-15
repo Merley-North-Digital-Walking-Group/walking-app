@@ -4,22 +4,22 @@
 
 <div class="container mx-auto mt-5">
     
-    <h2> 
-        Welcome to your home page {{ user.user.first_name }}
+    <h2 class="center"> 
+        Welcome to your home page, {{ user.user.first_name }}
     </h2>
 
 
     <div class="walk-container">
         <h3>My profile:</h3>
-        <P>Name: {{ user.user.first_name }} {{ user.user.last_name }}</P>
-        <P>Username: {{ user.user.username }}</P>
-        <P>email: {{ user.user.email }}</P>
+        <P><strong>Name:</strong> {{ user.user.first_name }} {{ user.user.last_name }}</P>
+        <P><strong>Username:</strong> {{ user.user.username }}</P>
+        <P><strong>email:</strong> {{ user.user.email }}</P>
     </div>
     <div class="walk-container">
         <h3>My groups:</h3>
         <P>  
            <td>{% for element in user.group.all %}
-               {{ element.group_name}}<br>
+               {{ element.group_name}}<br> <!--make this a link to the groups_details page-->
                {% endfor %}
            </td> 
         </P> 

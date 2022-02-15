@@ -1,0 +1,26 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container mx-auto mt-5">
+    
+    <h2 class="center"> 
+        {{ group.group_name }} <br /> group home page
+    </h2>
+
+
+    <div class="walk-container">
+        <h3>Group details:</h3>
+        <p><strong>Meeting day:</strong> {{ group.meeting_day }}</p>
+        <p><strong>Meeting time:</strong> {{ group.meeting_time }}</p>
+        <p><strong>Meetup link:</strong> <a href="{{ group.meetup_link }}" target="_blank">{{ group.meetup_link }}</p>
+    </div>
+
+    <div class="walk-container">
+        <p><strong>Description:</strong> {{ group.group_description }}</p>
+    </div>
+    
+</div>
+
+
+{% endblock %}

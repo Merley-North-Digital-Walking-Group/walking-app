@@ -21,8 +21,9 @@
           <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </div>
 
-        <div class="col-2 walk-external-link"><!--FROM HERE-->
-          <a href="{% url 'user_homepage' pk=1 %}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+        <div><!--FROM HERE-->
+          <a href="{% url 'user_homepage' pk=1 %}" class="btn btn-secondary btn-sm" target="_blank" type="button">User example</a>
+          <a href="{% url 'group_details' pk=1 %}" class="btn btn-secondary btn-sm" target="_blank" type="button">Group example</a>
         </div><!-- TO HERE WAS ADDED BY VICKY TRYING TO CREATE A LINK TO A USER PAGE BYPASSING THE LOG IN PROCESS AS IT'S NOT YET OPERATIONAL -->
 
         <div class="create-user">

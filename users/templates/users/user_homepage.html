@@ -19,7 +19,8 @@
         <h3>My groups:</h3>
         <P>  
            <td>{% for element in user.group.all %}
-               {{ element.group_name}}<br> <!--make this a link to the groups_details page-->
+               <a href="{% url 'group_details' pk=element.pk %}" target="_blank">{{ element.group_name}}</a>
+               <br />
                {% endfor %}
            </td> 
         </P> 
@@ -27,6 +28,9 @@
     </div>  
     
 </div>
+
+{% comment %} <a href="{% url 'walks_detail' pk=walk.pk %}" target="_blank"><i class="fas fa-external-link-alt"></i></a> {% endcomment %}
+
 
 
 {% endblock %}

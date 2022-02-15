@@ -61,6 +61,7 @@ h2 {
 
 h3 {
     font-size: 1.5;
+    font-weight: 700;
 }
 
 a {
@@ -308,6 +309,12 @@ p {
     text-align: center;
 }
 
+.news-link {
+    color: var(--dark);
+    font-size: 1.5vw;
+    text-decoration: underline;
+}
+
 /* map */
 #map {
     background-color: var(--medium);
@@ -347,6 +354,12 @@ p {
         margin-top: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .news-link {
+        font-size: 4vw;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
 }

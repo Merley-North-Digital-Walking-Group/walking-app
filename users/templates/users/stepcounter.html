@@ -1,0 +1,18 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container mx-auto mt-5">
+    
+    <h3 class="mb-5"> 
+        Thank you, {{ user.first_name }}
+    </h3>
+
+    <p>Your request for a free step counter has been received.</p>
+    <p>We will be in touch via email with tracking information.</p> 
+
+    <a href="{% url 'user_homepage' pk=1 %}" type="button" class="btn btn-primary mt-5">Back to my home page</a>
+    
+</div>
+
+{% endblock %}

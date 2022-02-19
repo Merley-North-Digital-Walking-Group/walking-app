@@ -7,11 +7,35 @@
         <h2>
             Contact us
         </h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+
+        {% comment %} contact form {% endcomment %}
+
+        <div class="walk-container mb-5">
+            <form name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xlezbpdr" method="post">
+                <fieldset>
+                    <label for="InputName" class="form-label">Your name</label>
+                        <input type="text" name="name" class="form-control mb-3" id="InputName" required="">
+                    <label for ="InputEmail" class="form-label">Your email address</label>
+                        <input type="email" name="_replyto" class="form-control mb-3" id="InputEmail" required="">
+                    <label for="InputMessage" class="form-label">Your message</label>
+                        <textarea rows="5" name="message" class = "form-control mb-3"></textarea>
+                        <input type="hidden" name="_subject" class="form-control" id="InputSubject" value="Digital Walking Group website contact form submission">
+                        <div>
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </div>
+                </fieldset>
+            </form>
+        </div>
+
     </div>
 </div>
+
+<script>
+    window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
+  </script>
 
 {% endblock %}

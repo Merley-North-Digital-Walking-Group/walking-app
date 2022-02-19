@@ -39,6 +39,17 @@
             <input type="date" class="form-control" id="exampleInputPassword1">
           </div>
 
+
+          {% comment %} 
+          <a href="{% url 'admin:index' %}">Admin</a> 
+          {% endcomment %}
+
+          <a href="{% url 'about' %}#codeOfConduct">Code of Conduct</a>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+            <label class="form-check-label" for="exampleCheck2">I confirm I have read and agreed to the Code of Conduct</label>
+          </div>
+
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Yes, I would like to receive the email newsletter</label>

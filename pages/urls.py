@@ -11,4 +11,5 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('walks.urls')),
     path('', include('groups.urls')),
+    path('', include('reviews.urls'))
 ]

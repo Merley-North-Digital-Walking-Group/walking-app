@@ -1,13 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Walk
+from .models import Review
+# from .models import Walk
+# from .models import App_User
 
 # Create your views here.
 
-# class WalkReviewsView(ListView):
-#     model = Review
-#     template_name = 'walks_detail.html'
+def review_list(request):
+    review_list = Review.objects.all()
+    return render(request, 'reviews/review_list.html', {'review_list': review_list})
 
-def walk_reviews(request):
-    walk_reviews = Walk.reviews()
-    return render(request, 'walks/walks_detail.html', {'walk': walk_reviews})
+def review(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    return render(request, 'reviews/review.html', {'review': review})
+
+# def review(request):
+#     review = Review.walk_title() #creates an object listing all reviews for a particular walk
+#     return review

@@ -1,7 +1,7 @@
 {% extends 'pages/base.html' %} 
 <!--Main-->
 {% block content %}
-
+{% if user.is_authenticated %}
 <div class="container mx-auto mt-5">
     
     <h2 id="walk_name"> 
@@ -140,5 +140,8 @@
 
 <script src="/static/js/map.js"></script>
 
-
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
 {% endblock %}

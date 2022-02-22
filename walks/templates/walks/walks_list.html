@@ -1,7 +1,7 @@
 {% extends 'pages/base.html' %} 
 <!--Main-->
 {% block content %}
-
+{% if user.is_authenticated %}
 <div class="container walks-container col-md-8 mx-auto mt-5">
     
     <h2>Walks near you</h2>
@@ -32,5 +32,8 @@
 {% endfor %}
 
 </div>
-
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
 {% endblock %}

@@ -1,24 +1,27 @@
 {% extends 'pages/base.html' %} 
 <!--Main-->
+
+{% block title %}Home{% endblock %}
+
 {% block content %}
+{% if user.is_authenticated %}
 
 <div class="container mx-auto mt-5">
-    
     <h2 class="center"> 
-        Welcome to your home page, {{ user.user.first_name }}
+        Welcome to your home page {{ user.first_name }}
     </h2>
 
 
     <div class="walk-container">
         <h3>My profile:</h3>
-        <P><strong>Name:</strong> {{ user.user.first_name }} {{ user.user.last_name }}</P>
-        <P><strong>Username:</strong> {{ user.user.username }}</P>
-        <P><strong>email:</strong> {{ user.user.email }}</P>
+        <P><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</P>
+        <P><strong>Username:</strong> {{ user.username }}</P>
+        <P><strong>email:</strong> {{ user.email }}</P>
     </div>
     <div class="walk-container">
         <h3>My groups:</h3>
         <P>  
-           <td>{% for element in user.group.all %}
+           <td>{% for element in group.all %}
                <a href="{% url 'group_details' pk=element.pk %}" target="_blank">{{ element.group_name}}</a>
                <br />
                {% endfor %}
@@ -35,5 +38,8 @@
 {% comment %} <a href="{% url 'walks_detail' pk=walk.pk %}" target="_blank"><i class="fas fa-external-link-alt"></i></a> {% endcomment %}
 
 
-
+  {% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
 {% endblock %}

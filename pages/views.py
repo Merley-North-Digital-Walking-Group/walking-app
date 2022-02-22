@@ -18,3 +18,9 @@ def news(request):
 
 def admin(request):
     return render(request, 'pages')
+
+
+
+# def user_homepage(request):
+#     user = get_object_or_404(App_User)
+#     return render(request, 'users/user_homepage.html', {'user': user}) 

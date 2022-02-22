@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -11,4 +12,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('walks.urls')),
     path('', include('groups.urls')),
+    path('user_homepage', TemplateView.as_view(template_name='users/user_homepage.html'), name='user_homepage'),
+    #path('login_email', views.login_email, name='login_email'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

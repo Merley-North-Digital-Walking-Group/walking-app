@@ -13,6 +13,5 @@ urlpatterns = [
     path('', include('walks.urls')),
     path('', include('groups.urls')),
     path('user_homepage', TemplateView.as_view(template_name='users/user_homepage.html'), name='user_homepage'),
-    #path('login_email', views.login_email, name='login_email'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

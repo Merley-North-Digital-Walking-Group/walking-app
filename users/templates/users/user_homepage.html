@@ -20,8 +20,9 @@
     </div>
     <div class="walk-container">
         <h3>My groups:</h3>
-        <P>  
-           <td>{% for element in group.all %}
+        <P> 
+           <td>{% for element in user.app_user.group.all %}
+            
                <a href="{% url 'group_details' pk=element.pk %}" target="_blank">{{ element.group_name}}</a>
                <br />
                {% endfor %}

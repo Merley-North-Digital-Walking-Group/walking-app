@@ -11,6 +11,5 @@ class App_User(models.Model):
     group = models.ManyToManyField('groups.Group')
     
    
-
     def __str__(self):
         return self.user.username

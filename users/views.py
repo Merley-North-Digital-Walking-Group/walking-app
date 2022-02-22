@@ -17,8 +17,8 @@ def create_user(request):
     return render(request, 'users/create_user.html', {})
 
 def user_homepage(request):
-    user = get_object_or_404(App_User)
-    return render(request, 'users/user_homepage.html', {'user': user}) 
+    app_user = get_object_or_404(App_User)
+    return render(request, 'users/user_homepage.html', {'app_user':app_user}) 
 
 def stepcounter(request):
     return render(request, 'users/stepcounter.html', {})

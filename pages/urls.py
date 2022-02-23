@@ -14,4 +14,5 @@ urlpatterns = [
     path('', include('groups.urls')),
     path('user_homepage', TemplateView.as_view(template_name='users/user_homepage.html'), name='user_homepage'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('reviews.urls'))
 ]

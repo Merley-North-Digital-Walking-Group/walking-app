@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container mx-auto mt-5">
+    
+    <h2 class="center"> 
+        {{ review.title }}
+    </h2>
+
+
+    <div class="walk-container">
+        <p> Posted by: {{ review.author }}</p>
+        <p> {{ review.body }}</p>
+        <p><strong>Rating:</strong> {{ review.walk_rating }}</p>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'pages/base.html' %} 
+<!--Main-->
+{% block content %}
+
+<div class="container walks-container col-md-8 mx-auto mt-5">
+    
+    <h2>Reviews of walks</h2>
+
+    {% for review in review_list %}
+
+    <div class="walk-container">
+        <div class="row">
+            <div class="col-10">
+                <h3 class="walk-name">{{ review.title }}</h3>
+                <p class="walk-distance">{{ review.author }} </p>
+                <p class="walk-distance">{{ review.body }} </p>
+                <p class="walk-distance">{{ review.author }} </p>
+            </div>          
+        </div>
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

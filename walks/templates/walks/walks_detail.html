@@ -120,20 +120,20 @@
     {% endif %}
         
 
-
     <div class="walk-container-reviews">
         <div class="row">
             <h3>Reviews</h3>
         </div>
 
-        <div class="row review">
-            <p class="review-p">Lovely walk! A bit steep, make sure you have good grip on your footwear.</p>
-            <p class="review-p">- <span class="review-username">betty_red22</span></p>
-        </div>
-        <div class="row review">
-            <p class="review-p">Lots of bluebells in the spring. My dog Scout loved this walk.</p>
-            <p class="review-p">- <span class="review-username">evfsmart</span></p>
-        </div>
+            <P>  
+
+                <p> Author: {{ review.author }} </p>
+                <p> Title: {{ review.title }} </p>
+                <p> {{ review.body }} </p>
+                
+            </P> 
+            
+        </div>  
     </div>
 </div>
 

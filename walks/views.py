@@ -1,6 +1,9 @@
 from ast import walk
 from django.shortcuts import render, get_object_or_404
+
+from reviews.views import review
 from .models import Walk #required to import information about the database table called 'Walk' in walks/models 
+from reviews.models import Review
 
 # Create your views here.
 def walks_list(request):
@@ -9,8 +12,15 @@ def walks_list(request):
 
 def walks_detail(request, pk):
     walk = get_object_or_404(Walk, pk=pk)
-    return render(request, 'walks/walks_detail.html', {'walk': walk})
+    review = get_object_or_404(Review)
+    return render(request, 'walks/walks_detail.html', {'walk': walk, 'review': review})
 
 def walk_photo(request):
     walk_photo = Walk.photo()
     return render(request, 'walks/walks_detail.html', {'walk': walk_photo})
+
+
+# def walks_detail(request, pk):
+#     walk = get_object_or_404(Walk, pk=pk)
+#     review = get_object_or_404(Review, pk=pk)
+#     return render(request, 'walks/walks_detail.html', {'walk': walk, 'review': review})

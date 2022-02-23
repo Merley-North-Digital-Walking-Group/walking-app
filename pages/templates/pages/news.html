@@ -1,7 +1,7 @@
 {% extends 'pages/base.html' %} 
 <!--Main-->
 {% block content %}
-
+{% if user.is_authenticated %}
 <div class="container mx-auto mt-5">
     <div class="header">
         <h2>
@@ -26,5 +26,8 @@
 
     </div>
 </div>
-
+{% else %}
+  <p>You are not logged in</p>
+  <h3><a class="nav-link" href="{% url 'index' %}">Log in</a></h3>
+{% endif %}
 {% endblock %}

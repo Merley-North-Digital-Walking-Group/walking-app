@@ -30,20 +30,20 @@
         </P> 
         
     </div>  
-    <div class="mt-5 mb-5">
+    <div class="mt-5 mb-4">
         <a href="{% url 'stepcounter' %}" type="button" class="btn btn-lg btn-primary">Request free step counter</a>
     </div>
     <div>
-        <p><a href="{% url 'logout' %}">Log Out</a></p>
+        <a href="{% url 'logout' %}" type="button" class="btn btn-secondary mb-5">Log out</a>
     </div>
     
 </div>
 
-{% comment %} <a href="{% url 'walks_detail' pk=walk.pk %}" target="_blank"><i class="fas fa-external-link-alt"></i></a> {% endcomment %}
-
-
-  {% else %}
-  <p>You are not logged in</p>
-  <h3><a class="nav-link" href="{% url 'index' %}">Log in</a></h3>
+{% else %}
+    <div class="container mx-auto mt-5">
+        <p>You are not logged in</p>
+        <a href="{% url 'index' %}" type="button" class="btn btn-lg btn-primary">Log in</a>
+    </div>
+  
 {% endif %}
 {% endblock %}

@@ -219,9 +219,9 @@ strong {
         display: none;
     }
 
-    .weather-app li {
+    /* .weather-app li {
         font-size: 3vw;
-    }
+    } */
 
     .weather-app h2 {
         font-size: 6vw;

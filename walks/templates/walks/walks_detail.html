@@ -126,9 +126,10 @@
         </div>
 
             <P>  
-               {% for element in review_detail.all %}
-                    {{ element.title }}
-                {% endfor %}
+
+                <p> Author: {{ review.author }} </p>
+                <p> Title: {{ review.title }} </p>
+                <p> {{ review.body }} </p>
                 
             </P> 
             

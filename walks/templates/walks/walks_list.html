@@ -11,7 +11,7 @@
     <div class="walk-container">
         <div class="row">
             <div class="col-10">
-                <h3 class="walk-name">{{ walk.walk_name }}</h3>
+                <h3 class="walk-name"><a href="{% url 'walks_detail' pk=walk.pk %}">{{ walk.walk_name }}</a></h3>
                 <p class="walk-distance">{{ walk.walk_length }} miles</p>
                 {% if walk.parking %} <i class="fas fa-parking circle circle-blue"></i> {% endif %}
                 {% if walk.wheelchair_access %} <i class="fas fa-wheelchair circle circle-green"></i> {% endif %}

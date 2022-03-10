@@ -14,7 +14,7 @@ Prerequisites:
 
 1 - Clone repository from GitHub on your local machine.
 
-2 - Install and activate a python venv.
+2 - Create and activate a python venv.
 
 3 - Install required packages:
 ```
